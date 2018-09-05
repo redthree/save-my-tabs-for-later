@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			});
 
 		} else {
-			respMessage.innerHTML = '<button id="saveTabs">Save Tabs</button>';
+			respMessage.innerHTML = '<button id="saveTabs">Save my tabs</button>';
 
 			var btnSaveTabs = document.getElementById('saveTabs');
 
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
 				chrome.tabs.query({currentWindow: true}, function(tabs){
 					chrome.storage.sync.clear(null);
 					chrome.storage.sync.set({'tabsArr': tabs}, function(){
-						respMessage.innerHTML = 'Tabs are saved';
+						respMessage.innerHTML = 'Tabs saved!';
 					});
 				});
 			});
