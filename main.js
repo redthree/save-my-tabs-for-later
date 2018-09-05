@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
+
 	var respMessage = document.getElementById('respMessage');
 	
 	chrome.storage.sync.get(['tabsArr'], function(result){
